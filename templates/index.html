@@ -10,7 +10,7 @@
             <img src="https://github.com/jasondaween.png" alt="GitHub PFP" width="30px">
             <a href="https://github.com/jasondaween" style="text-decoration: none; color:black;">Jason</a>
         </div>
-        <div class="hero">
+        <div class="hero-section">
             <h1>Song Recommender</h1>
             <h5>Generate songs based on your favorite music genre</h5>
             <form action="/" method="POST">
@@ -25,11 +25,17 @@
             </form>
         </div>
         {% if song %}
-        <div class="result">
-            <h2>A random {{ genre }} song:</h2>
-            <p>{{ song.name }} by {{ song.artist }}</p>
-            <img src="{{ song.img }}" alt="Album Cover" width="200px">
-            <a href="{{ song.link }}" target="_blank">Listen on Spotify</a>
+        <div class="song-card">
+            <h2>Genre: {{ genre }}</h2>
+
+            <div class="song-container">
+                <img src="{{ song.img }}" alt="Album Cover" width="200px">
+
+                <div class="song-info">
+                    <a href="{{ song.link }}" target="_blank">{{ song.name }}</a>
+                    <p>{{ song.artist }}</p>
+                </div>
+            </div>
         </div>
         {% endif %}
     </body>

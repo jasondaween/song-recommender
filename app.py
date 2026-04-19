@@ -2,6 +2,25 @@ from flask import Flask, redirect, render_template, request
 import random
 
 songs = {
+    "C-Pop": [
+        {
+            "name": "八方来财", "artist": "攬佬SKAI ISYOURGOD",
+            "img": "https://i.scdn.co/image/ab67616d0000b2735e378db93f143ce29d316528",
+            "link": "https://open.spotify.com/track/7jm2PueKmv4EOHfdbdXMKT?si=514712bb1c9e4cff"
+        }
+    ],
+    "Hip Hop": [
+        {
+            "name": "heart pt. 6", "artist": "Kendrick Lamar",
+            "img": "https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58",
+            "link": "https://open.spotify.com/track/1SGvjfc85yzqKXsfKcCxn2?si=8b731c1dca6d42b1"
+        },
+        {
+            "name": "Devil In A New Dress", "artist": "Kanye West & Rick Ross",
+            "img": "https://i.scdn.co/image/ab67616d0000b273baf2a68126739ff553f2930a",
+            "link": "https://open.spotify.com/track/1UGD3lW3tDmgZfAVDh6w7r?si=c80986c72e2f4b4a"
+        },
+    ],
     "Pop": [
         {
             "name": "Die With A Smile", "artist": "Lady Gaga & Bruno Mars", 
@@ -28,7 +47,14 @@ songs = {
             "img": "https://i.scdn.co/image/ab67616d00001e0256ac7b86e090f307e218e9c8",
             "link": "https://open.spotify.com/track/3e9HZxeyfWwjeyPAMmWSSQ?si=e33bce6094f34ccb"
         }
-    ]
+    ],
+    "R&B": [
+        {
+            "name": "Nights", "artist": "Frank Ocean",
+            "img": "https://cdn-images.dzcdn.net/images/cover/aa7e6de00b0810f5051aa60b489f58d8/1900x1900-000000-80-0-0.jpg",
+            "link": "https://open.spotify.com/track/7eqoqGkKwgOaWNNHx90uEZ?si=9feca6d779064644"
+        },
+    ],
 }
 
 app = Flask(__name__)
